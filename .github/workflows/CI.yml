@@ -1,0 +1,44 @@
+name: Auto KernelSU Files Host Updater
+on:
+  schedule:
+    - cron: 0 0/6 * * *
+  workflow_dispatch:
+
+jobs:
+  Works:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Tools
+        run: |
+          sudo apt install jq -y
+          chmod +x chkdir.sh
+          ./chkdir.sh
+      
+      - name: Download Installer Shell Script
+        run: |
+          chmod +x chkdir.sh
+          ./chkdir.sh
+
+          wget https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh -O ./official/setup.sh
+          wget https://raw.githubusercontent.com/MlgmXyysd/KernelSU_Debug/master/kernel/setup.sh -O ./kernelsu_debug/setup.sh
+          
+      - name: Commit files
+        run: |
+          {
+              git config user.name github-actions
+              git config user.email github-actions@github.com
+              git add .
+              git commit -m "$(date "+%Y-%m-%d %H:%M:%S") UTC" -a
+              if [ $? -eq 0 ]; then
+                  date >> RunDate.txt
+                  git commit -m "$(date "+%Y-%m-%d %H:%M:%S")" -a
+                  git push
+              else
+                  echo No Update
+              fi
+          } || {
+              echo Execution Failed >RunDate.txt
+              exit 1
+          }
