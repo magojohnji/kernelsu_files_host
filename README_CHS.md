@@ -1,35 +1,36 @@
 # kernelsu_files_host
 
-[简体中文](https://github.com/magojohnji/kernelsu-files-host/blob/master/README_CN.md)
+[English](https://github.com/magojohnji/kernelsu-files-host/blob/master/README.md)
 
-Custom kernelsu update channel, and keep important versions.
+代理 KernelSU 更新通道
 
-- ⚠ *WARNING!* **Please DON'T use them if you don't trust them.**
+- ⚠ *警告!* **如果你不信任，请不要使用他们。**
 
-Official repositories: 
+官方仓库： 
 [Offical](https://github.com/tiann/KernelSU)
 [Delta](https://github.com/MlgmXyysd/KernelSU_Debug)
 
-The link is redirected to the accelerated mirror website fastgit.org and cdn.jsdelivr.net ~~ and synchronized to Gitee.~~ (Coming) The content of the file is updated synchronously every 6 hours.
+链接重新指向加速镜像网站 fastgit.org、cdn.jsdelivr.net ~~ 并同步到Gitee ~~（即将推出）。文件内容每 6 小时同步更新一次
 
-***The following links are separated into two parts:***
+***以下的链接分为两部分：***
 
-- **The json file is linked to their respective official repositories (except "not official"), but changed "github.com" and "raw.githubusercontent.com" into "download.fastgit.org" and "raw.fastgit.org" to speed up the download.**
-- **The apk file is linked to this repository, use "cdn.jsdelivr.net" to speed up the download.**
+- **json 文件链接到各自的官方存储库（“非官方”除外），但将“github.com”和“raw.githubusercontent.com”更改为“download.fastgit.org”和“raw.fastgit.org” 加快下载速度。**
+- **apk 文件链接到此存储库，使用“cdn.jsdelivr.net”加快下载速度。**
 
-## Custom update channel
+## 自定义更新通道
 
-|  Offical |                                  Links                                   |
+|  官方版 |                                  链接                                   |
 | :----: | :---------------------------------------------------------------------: |
 | stable | [installer](https://cdn.jsdelivr.net/gh/magojohnji/kernelsu-files-host@master/offical/setup.sh) | |
 
-|  KernelSU_Debug |                                  Links                                   |
+|  KernelSU_Debug |                                  链接                                   |
 | :----: | :---------------------------------------------------------------------: |
 | stable | [installer](https://cdn.jsdelivr.net/gh/magojohnji/kernelsu-files-host@master/kernelsu_debug/setup.sh) | |
 
-## Other
 
-If you need to replace the accelerated website, or add a new version, please submit New issues.
+## 其他
+
+如果需要更换加速网站，或添加新版本，请提交New issues。
 
 ## License
 
